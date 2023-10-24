@@ -1,6 +1,6 @@
 dash==2.14.0
 dash-core-components==2.0.0
-dash-html-components==2.0.15
+dash-html-components==2.0.0
 dash-table==5.2.8
 gunicorn==21.2.0
 pandas==1.4.4
