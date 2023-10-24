@@ -7,3 +7,4 @@ pandas==1.4.4
 plotly==5.9.0
 tnorma==0.0.3
 numpy==1.23.5
+scipy==1.9.1
