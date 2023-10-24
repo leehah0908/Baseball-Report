@@ -9,7 +9,7 @@ from tnorma import tnorma
 
 
 # List of all CSV files
-path = 'C:/Users/82104/Desktop/baseball_report/Baseball-Report/new_data/1nd lotte/'
+path = 'new_data/1nd lotte/'
 csv_files = [
     path + "kMin_001.csv",
     path + "kMin_002.csv",
