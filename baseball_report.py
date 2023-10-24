@@ -9,16 +9,17 @@ from tnorma import tnorma
 
 
 # List of all CSV files
+path = 'C:/Users/82104/Desktop/baseball_report/Baseball-Report/new_data/1nd lotte/'
 csv_files = [
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_001.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_002.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_003.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_004.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_005.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_006.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_007.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_008.csv",
-    "C:/Users/82104/Desktop/baseball/new_data/1nd lotte/kMin_009.csv"
+    path + "kMin_001.csv",
+    path + "kMin_002.csv",
+    path + "kMin_003.csv",
+    path + "kMin_004.csv",
+    path + "kMin_005.csv",
+    path + "kMin_006.csv",
+    path + "kMin_007.csv",
+    path + "kMin_008.csv",
+    path + "kMin_009.csv"
 ]
 
 # Load and consolidate data from all CSV files into one DataFrame
