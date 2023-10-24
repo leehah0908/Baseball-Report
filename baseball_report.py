@@ -87,6 +87,8 @@ src_name = {'TORSO_PELVIC_ANGLE_Z' : "https://img1.daumcdn.net/thumb/R1280x0/?sc
 
 # Initialization
 app = dash.Dash(__name__)
+app.title = ("KMU Baseball Report")
+server = app.server
 
 # 2. Layout
 app.layout = html.Div([
@@ -301,4 +303,4 @@ def update_graphs(trials, columns, graph_type):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
