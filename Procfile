@@ -1,1 +1,1 @@
-web:gunicorn baseball_report:server
+web: gunicorn baseball_report:server
