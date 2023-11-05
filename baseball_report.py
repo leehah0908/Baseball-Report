@@ -6,21 +6,21 @@ import plotly.graph_objs as go
 import pandas as pd
 import os
 
-folder_path = 'Data/Processed Data/'
+folder_path = 'Data/'
 
-pit_path = folder_path + 'Pitching Data'
+pit_path = folder_path + 'Processed Data/Pitching Data'
 pit_all_files = [f for f in os.listdir(pit_path) if f.endswith('.csv')]
 pit_players = list(set([f.split('_')[0] for f in pit_all_files]))
 
-hit_path = folder_path + 'Hitting Data'
+hit_path = folder_path + 'Processed Data/Hitting Data'
 hit_all_files = [f for f in os.listdir(hit_path) if f.endswith('.csv')]
 hit_players = list(set([f.split('_')[0] for f in hit_all_files]))
 
-pit_avg = pd.read_csv('C:/Users/user/Desktop/Samsung Report/Data/Driveline_Pitching_Timenormalize_avg.csv')
-pit_std = pd.read_csv('C:/Users/user/Desktop/Samsung Report/Data/Driveline_Pitching_Timenormalize_std.csv')
+pit_avg = pd.read_csv(folder_path + 'Driveline_Pitching_Timenormalize_avg.csv')
+pit_std = pd.read_csv(folder_path + 'Driveline_Pitching_Timenormalize_std.csv')
 
-hit_avg = pd.read_csv('C:/Users/user/Desktop/Samsung Report/Data/Driveline_Hitting_Timenormalize_avg.csv')
-hit_std = pd.read_csv('C:/Users/user/Desktop/Samsung Report/Data/Driveline_Hitting_Timenormalize_std.csv')
+hit_avg = pd.read_csv(folder_path + 'Driveline_Hitting_Timenormalize_avg.csv')
+hit_std = pd.read_csv(folder_path + 'Driveline_Hitting_Timenormalize_std.csv')
 
 pit_data = []
 for idx, file in enumerate(pit_all_files, 1):
@@ -55,18 +55,29 @@ pit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R128
             'Trunk Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb4GH1Z%2Fbtsy3OSltlF%2FqGNLUkvxLZfIeupKkjoox1%2Fimg.png",
             'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png"}
 
+pit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
+            'Elbow Flexion' : "팔꿈치 굽힘 각도",
+            'Shoulder External Rotaion' : "어깨 외회전 각도",
+            'Shoulder Horizontal Abduction' : "어깨 수평 벌림 각도",
+            'Shoulder Abduction' : "어깨 벌림 각도",
+            'Lead Leg Knee Flexion' : "무릎 굽힘 각도",
+            'Lead Leg Knee Extension Angular Velocity' : "무릎 폄속도",
+            'Trunk Forward Tilt' : "앞쪽 몸통 기울기",
+            'Trunk Lateral Tilt' : "옆쪽 몸통 기울기",
+            'Kinematic Sequence' : "키네마틱 시퀀스"}
+
 pit_kinematic_columns = ['Pelvis Angular Velocity',
                      'Torso Angular Velocity',
                      'Elbow Angular Velocity',
                      'Shoulder Angular Velocity']
 
-pit_kinematic_colors = {'Pelvis Angular Velocity': 'red',
-                    'Torso Angular Velocity': 'orange',
-                    'Elbow Angular Velocity': 'green',
-                    'Shoulder Angular Velocity': 'blue'}
+pit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
+                    'Torso Angular Velocity': '#2a9d8f',
+                    'Elbow Angular Velocity': '#e9c46a',
+                    'Shoulder Angular Velocity': '#3a86ff'}
 
 hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'Shoulder External Rotaion' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FF1hNM%2FbtsyXZNSsG0%2FqHcaFPr3U5IqKBP8enGdlk%2Fimg.png",
+            'Shoulder Horizontal Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FF1hNM%2FbtsyXZNSsG0%2FqHcaFPr3U5IqKBP8enGdlk%2Fimg.png",
             'Shoulder Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYPj8D%2Fbtsy4b0PjGT%2FacxybeGX01XUgjOW3KzTuk%2Fimg.png",
             'Elbow Flexion' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcA5uIp%2FbtsyTXXzk3H%2F3gvShC3j2W5dpkP6oSn6qK%2Fimg.png",
             'Torso Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbMNU1k%2FbtsyTxEQCGe%2FazjHlTudjOQJdjkMd45RBK%2Fimg.png",
@@ -78,21 +89,36 @@ hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R128
             'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
             'GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png"}
 
+hit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
+            'Shoulder Horizontal Abduction' : "어깨 수평 벌림 각도",
+            'Shoulder Abduction' : "어깨 벌림 각도",
+            'Elbow Flexion' : "팔꿈치 굽힘 각도",
+            'Torso Lateral Tilt' : "옆쪽 몸통 기울기",
+            'Torso Forward Tilt' : "앞쪽 몸통 기울기",
+            'Torso Rotation' : "몸통 회전 각도",
+            'Pelvis Lateral Tilt' : "옆쪽 골반 기울기",
+            'Pelvis Forward Tilt' : "앞쪽 골반 기울기",
+            'Pelvis Rotation' : "골반 회전 각도",
+            'Kinematic Sequence' : "키네마틱 시퀀스",
+            'GRF' : "지면 반력",
+            'COP Velocity' : '압력 중심점 이동 속도'}
+
+
 hit_kinematic_columns = ['Pelvis Angular Velocity',
                          'Torso Angular Velocity',
                          'Arm Angular Velocity']
 
-hit_kinematic_colors = {'Pelvis Angular Velocity': 'red',
-                        'Torso Angular Velocity': 'green',
-                        'Arm Angular Velocity': 'blue'}
+hit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
+                        'Torso Angular Velocity': '#2a9d8f',
+                        'Arm Angular Velocity': '#3a86ff'}
 
 hit_GRF_columns = ['Front Vertical Force',
                          'Back Vertical Force',
                          'Total Vertical Force']
 
-hit_GRF_colors = {'Front Vertical Force': 'red',
-                        'Back Vertical Force': 'green',
-                        'Total Vertical Force': 'blue'}
+hit_GRF_colors = {'Front Vertical Force': '#e63946',
+                        'Back Vertical Force': '#2a9d8f',
+                        'Total Vertical Force': '#3a86ff'}
 
 # Initialization
 app = dash.Dash(__name__)
@@ -102,29 +128,29 @@ server = app.server
 # 2. Layout
 app.layout = html.Div([
     html.Div(id='report-selection', children=[
-        html.H1("Select Report Type", style={'color': 'white', 'fontFamily': 'Verdana'}),
+        html.H1("레포트 유형 선택", style={'color': 'white', 'fontFamily': 'Verdana'}),
     
         dcc.RadioItems(
             id='report-type-radioitems',
             options=[
-                {'label': "Batter's Report", 'value': 'batter'},
-                {'label': "Pitcher's Report", 'value': 'pitcher'}
+                {'label': "타자 레포트", 'value': 'hitter'},
+                {'label': "투수 레포트", 'value': 'pitcher'}
             ],
             style={'color': 'white', 'fontFamily': 'Verdana'},
-            labelStyle={'display': 'inline-block', 'marginRight': '20px'}
+            labelStyle={'display': 'inline-block', 'marginRight': '30px'}
         ),
-        html.Button("Go", id="go-button-report", style={'marginTop': '20px'}),
-        html.Button("Back to Report Selection", id="back-button", style={'marginBottom': '20px', 'display': 'none'})
+        html.Button("레포트 보기", id="go-button-report", style={'marginTop': '30px'}),
+        html.Button("뒤로 가기", id="back-button", style={'display': 'none'})
         ]),
     
-    # Report-specific layout
     html.Div(id='report-dashboard')
-    ], style={'backgroundColor': '#074CA1'})
+    ], style={'padding' : '20px', 'backgroundColor': '#313746'})
 
 # 3. Callbacks
 @app.callback(
     [dd.Output('report-dashboard', 'children'),
-     dd.Output('report-selection', 'style')],
+     dd.Output('report-selection', 'style'),
+     dd.Output('report-type-radioitems', 'value')],  # 값 초기화를 위해 Output 추가
     [dd.Input('go-button-report', 'n_clicks'),
      dd.Input('back-button', 'n_clicks')],
     [dd.State('report-type-radioitems', 'value')]
@@ -133,67 +159,71 @@ app.layout = html.Div([
 def combined_callback(go_button_clicks, back_button_clicks, selected_report):
     ctx = dash.callback_context
     if not ctx.triggered:
-        return None, {}
+        # 'report-type-radioitems'의 Output을 추가로 반환해야 하므로, None 대신 dash.no_update를 추가합니다.
+        return None, {}, dash.no_update
     
-    # Identify which component was triggered
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
-    # If "Go" button was clicked
-    if triggered_id == 'go-button-report' and go_button_clicks and selected_report == 'pitcher':
-        return html.Div([
-            html.Button("Back to Report Selection", id="back-button", style={'marginBottom': '20px'}),
-            dcc.Dropdown(
-                id='player-dropdown',
-                options=[{'label': player, 'value': player} for player in pit_players],
-                placeholder="Select a player"
-            ),
+    if triggered_id == 'go-button-report' and go_button_clicks:
+        if selected_report == 'pitcher':
+            return html.Div([html.Div([
+                    html.Span("투수 레포트", style={'float': 'left', 'marginBottom': '20px', 'marginLeft': '10px', 'lineHeight': '30px', 'fontSize': '30px', 'color': 'white'}),
+                    html.Button("뒤로 가기", id="back-button", style={'float': 'right'})
+                    ], style={'textAlign': 'right', 'display': 'block'}),
+                dcc.Dropdown(
+                    id='player-dropdown',
+                    options=[{'label': player, 'value': player} for player in pit_players],
+                    placeholder="선수 선택",
+                    style={'marginTop': '30px', 'marginBottom': '30px', 'fontFamily': 'Verdana'}
+                ),
 
-            dcc.RadioItems(
-                id='consistency-mean-radioitems',
-                options=[
-                    {'label': "Consistency", 'value': 'consistency'},
-                    {'label': "Mean", 'value': 'mean'}
-                ],
-                value='consistency',
-                style={'color': 'white', 'fontFamily': 'Verdana'},
-                labelStyle={'display': 'inline-block', 'marginRight': '20px'}
-            ),
+                dcc.RadioItems(
+                    id='consistency-mean-radioitems',
+                    options=[
+                        {'label': "개별 그래프", 'value': 'consistency'},
+                        {'label': "평균 그래프", 'value': 'mean'}
+                    ],
+                    value='consistency',
+                    style={'color': 'white', 'fontFamily': 'Verdana', 'marginBottom': '30px'},
+                    labelStyle={'display': 'inline-block', 'marginRight': '30px'}
+                ),
 
-            html.Div(id='player-checklists'),
-            html.Div(id='player-graph')
-        ], style={'marginLeft': '30px', 'padding': '10px', 'marginBottom': '30px', 'backgroundColor': '#2B303D'}), {'display': 'none'}
-    
-    elif triggered_id == 'go-button-report' and go_button_clicks and selected_report == 'batter':
-        return html.Div([
-            html.Button("Back to Report Selection", id="back-button", style={'marginBottom': '20px'}),
-            dcc.Dropdown(
-                id='player-dropdown',
-                options=[{'label': player, 'value': player} for player in hit_players],
-                placeholder="Select a player..."
-            ),
+                html.Div(id='player-checklists'),
+                html.Div(id='player-graph')
+            ], style={'padding': '10px', 'backgroundColor': '#2B303D'}), {'display': 'none'}, dash.no_update
 
-            dcc.RadioItems(
-                id='consistency-mean-radioitems',
-                options=[
-                    {'label': "Consistency", 'value': 'consistency'},
-                    {'label': "Mean", 'value': 'mean'}
-                ],
-                value='consistency',
-                style={'color': 'white', 'fontFamily': 'Verdana', 'display': 'none'},  # Initially hidden
-                labelStyle={'display': 'inline-block', 'marginRight': '20px'}
-            ),
+        elif selected_report == 'hitter':
+            return html.Div([html.Div([
+                    html.Span("타자 레포트", style={'float': 'left', 'marginBottom': '20px', 'marginLeft': '10px', 'lineHeight': '30px', 'fontSize': '30px', 'color': 'white'}),
+                    html.Button("뒤로 가기", id="back-button", style={'float': 'right'})
+                    ], style={'textAlign': 'right', 'display': 'block'}),
+                dcc.Dropdown(
+                    id='player-dropdown',
+                    options=[{'label': player, 'value': player} for player in hit_players],
+                    placeholder="선수 선택",
+                    style={'marginTop': '30px', 'marginBottom': '30px', 'fontFamily': 'Verdana'}
+                ),
 
-            html.Div(id='player-checklists'),
-            html.Div(id='player-graph')
-        ], style={'marginLeft': '30px', 'padding': '10px', 'marginBottom': '30px', 'backgroundColor': '#074CA1'}), {'display': 'none'}
+                dcc.RadioItems(
+                    id='consistency-mean-radioitems',
+                    options=[
+                        {'label': "개별 그래프", 'value': 'consistency'},
+                        {'label': "평균 그래프", 'value': 'mean'}
+                    ],
+                    value='consistency',
+                    style={'color': 'white', 'fontFamily': 'Verdana', 'marginBottom': '30px'},
+                    labelStyle={'display': 'inline-block', 'marginRight': '30px'}
+                ),
 
-    # If "Back to Report Selection" button was clicked
+                html.Div(id='player-checklists'),
+                html.Div(id='player-graph')
+            ], style={'padding': '10px', 'backgroundColor': '#2B303D'}), {'display': 'none'}, dash.no_update
+
     elif triggered_id == 'back-button' and back_button_clicks:
-        return None, {}
+        return None, {'display': 'block'}, ''
     
-    return dash.no_update, dash.no_update
+    return dash.no_update, dash.no_update, dash.no_update
 
-# Callback for player dropdown to update checklists and graph
 @app.callback(
     dd.Output('player-checklists', 'children'),
     [dd.Input('player-dropdown', 'value')],
@@ -205,70 +235,62 @@ def update_checklists(selected_player, selected_report):
         return None
 
     if selected_report == 'pitcher':
-        # Extract data for the selected player
         player_data = pit_all_data[pit_all_data['Name'] == selected_player]
 
         trial_buttons = html.Div([
-            html.Button("Select All", id="select-all-trials", style={'marginRight': '10px'}),
-            html.Button("Clear All", id="clear-all-trials")
+            html.Button("전체 선택", id="select-all-trials", style={'marginTop': '15px', 'marginBottom': '10px', 'marginRight': '10px'}),
+            html.Button("전체 해제", id="clear-all-trials")
         ])
 
-        # Create Trials Checklist
         trials_checklist = dcc.Checklist(
             id='trial-checklist',
-            options=[{'label': f'Trial {i}', 'value': i} for i in player_data['Trial'].unique()],
+            options=[{'label': f'{i}번째', 'value': i} for i in player_data['Trial'].unique()],
             value=[],
             inline=True,
             style={'color': 'white', 'fontFamily': 'Verdana'},
-            labelStyle={'marginRight': '20px'}
+            labelStyle={'marginRight': '30px', 'marginBottom': '10px'}
         )
 
-        # Buttons for "Select All" and "Clear All" for Variables
         variables_buttons = html.Div([
-            html.Button("Select All", id="select-all-variables", style={'marginRight': '10px'}),
-            html.Button("Clear All", id="clear-all-variables")
+            html.Button("전체 선택", id="select-all-variables", style={'marginTop': '15px', 'marginBottom': '10px', 'marginRight': '10px'}),
+            html.Button("전체 해제", id="clear-all-variables")
         ])
 
-        # Create Variables Checklist
         columns_to_exclude = ['Time', 'Trial', 'Name', 'Pelvis Angular Velocity', 'Torso Angular Velocity', 'Elbow Angular Velocity', 'Shoulder Angular Velocity']
         variable_options = [col for col in player_data.columns if col not in columns_to_exclude]
         variable_options.append('Kinematic Sequence')
 
         variables_checklist = dcc.Checklist(
             id='variables-checklist',
-            options=[{'label': col, 'value': col} for col in variable_options],
+            options=[{'label': pit_col_name.get(col, ""), 'value': col} for col in variable_options],
             value=[],
             inline=True,
             style={'color': 'white', 'fontFamily': 'Verdana'},
-            labelStyle={'marginRight': '20px'}
+            labelStyle={'marginRight': '30px'}
         )
 
-    elif selected_report == 'batter':
-        # Extract data for the selected player
+    elif selected_report == 'hitter':
         player_data = hit_all_data[hit_all_data['Name'] == selected_player]
 
         trial_buttons = html.Div([
-            html.Button("Select All", id="select-all-trials", style={'marginRight': '10px'}),
-            html.Button("Clear All", id="clear-all-trials")
+            html.Button("전체 선택", id="select-all-trials", style={'marginTop': '15px', 'marginBottom': '10px', 'marginRight': '10px'}),
+            html.Button("전체 해제", id="clear-all-trials")
         ])
 
-        # Create Trials Checklist
         trials_checklist = dcc.Checklist(
             id='trial-checklist',
-            options=[{'label': f'Trial {i}', 'value': i} for i in player_data['Trial'].unique()],
+            options=[{'label': f'{i}번째', 'value': i} for i in player_data['Trial'].unique()],
             value=[],
             inline=True,
             style={'color': 'white', 'fontFamily': 'Verdana'},
-            labelStyle={'marginRight': '20px'}
+            labelStyle={'marginRight': '30px', 'marginBottom': '10px'}
         )
 
-        # Buttons for "Select All" and "Clear All" for Variables
         variables_buttons = html.Div([
-            html.Button("Select All", id="select-all-variables", style={'marginRight': '10px'}),
-            html.Button("Clear All", id="clear-all-variables")
+            html.Button("전체 선택", id="select-all-variables", style={'marginTop': '15px', 'marginBottom': '10px', 'marginRight': '10px'}),
+            html.Button("전체 해제", id="clear-all-variables")
         ])
-
-        # Create Variables Checklist   
+ 
         columns_to_exclude = ['Time', 'Trial', 'Name', 'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity', 'Front Vertical Force', 'Back Vertical Force', 'Total Vertical Force']
         variable_options = [col for col in player_data.columns if col not in columns_to_exclude]
         variable_options.append('Kinematic Sequence')
@@ -276,23 +298,24 @@ def update_checklists(selected_player, selected_report):
 
         variables_checklist = dcc.Checklist(
             id='variables-checklist',
-            options=[{'label': col, 'value': col} for col in variable_options],
+            options=[{'label': hit_col_name.get(col, ""), 'value': col} for col in variable_options],
             value=[],
             inline=True,
             style={'color': 'white', 'fontFamily': 'Verdana'},
-            labelStyle={'marginRight': '20px'}
+            labelStyle={'marginRight': '30px'}
         )
 
     return html.Div([
-        html.Label("Select Trials:", style={'color': 'white'}),
+        html.Label("Trial 선택", style={'color': 'white', 'fontFamily': 'Verdana'}),
         trial_buttons,
         trials_checklist,
-        html.Label("Select Variables:", style={'color': 'white'}),
+        html.Div(style={'height': '30px', 'backgroundColor': '#2B303D'}),
+        html.Label("변수 선택", style={'color': 'white', 'fontFamily': 'Verdana', 'marginTop': '20px'}),
         variables_buttons,
-        variables_checklist
-    ])
+        variables_checklist,
+        html.Div(style={'height': '50px', 'backgroundColor': '#2B303D'})
+        ])
 
-# Callbacks for the new buttons
 @app.callback(
     dd.Output('trial-checklist', 'value'),
     [dd.Input('select-all-trials', 'n_clicks'),
@@ -339,190 +362,430 @@ def update_variable_selection(select_all, clear_all, options):
      dd.Input('trial-checklist', 'value'),
      dd.Input('variables-checklist', 'value'),
      dd.Input('consistency-mean-radioitems', 'value')],
-    [dd.State('report-type-radioitems', 'value')]  # Added this input
+    [dd.State('report-type-radioitems', 'value')]
 )
 
 def update_graph(selected_player, selected_trials, selected_vars, consistency_mean, selected_report):
     if not selected_player or not selected_trials or not selected_vars:
         return None
 
-    # Filter data based on selected player and trials
     if selected_report == 'pitcher':
         filtered_data = pit_all_data[(pit_all_data['Name'] == selected_player) & (pit_all_data['Trial'].isin(selected_trials))].reset_index(drop=True)
-    elif selected_report == 'batter':
+    elif selected_report == 'hitter':
         filtered_data = hit_all_data[(hit_all_data['Name'] == selected_player) & (hit_all_data['Trial'].isin(selected_trials))].reset_index(drop=True)
             
     graphs = []
 
     if "Kinematic Sequence" in selected_vars:
         traces = []
+        min_values = []
+        max_values = []
 
         if selected_report == 'pitcher':
             if consistency_mean == 'mean':
-                mean_data = filtered_data.groupby('Time').mean().reset_index()
-                print(mean_data)
+                mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
                 for col in pit_kinematic_columns:
-                    traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'Mean {col}', line=dict(color=pit_kinematic_colors[col])))
-            else:
-                for col in pit_kinematic_columns:
-                    for idx, trial in enumerate(selected_trials):
-                        trial_data = filtered_data[filtered_data['Trial'] == trial]
-                        color = pit_kinematic_colors[col]
-                        traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{col} - Trial {trial}', line=dict(color=color)))
+                    traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=pit_kinematic_colors[col])))
+                    min_values.append(mean_data[col].min())
+                    max_values.append(mean_data[col].max())
 
-            # Create a graph for the Kinematic Sequence
+                min_of_mins = min(min_values)
+                max_of_maxes = max(max_values)
+                for col in pit_kinematic_columns:
+                    max_time = mean_data.loc[mean_data.index[mean_data[col] == mean_data[col].max()][0], 'Time']
+                    traces.append(go.Scatter(
+                        x=[max_time, max_time],
+                        y=[min_of_mins, max_of_maxes],
+                        mode='lines',
+                        line=dict(color=pit_kinematic_colors[col], dash='dot'),
+                        showlegend=False
+                    ))
+
+                traces.append(go.Scatter(
+                    x=[375, 375],
+                    y=[min_of_mins, max_of_maxes],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+            else:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    for col in pit_kinematic_columns:
+                        max_time = trial_data.index[trial_data[col] == trial_data[col].max()][0]
+                        max_value = trial_data[col].max()
+                        min_value = trial_data[col].min()
+                        min_values.append(min_value)
+                        max_values.append(max_value)
+                        traces.append(go.Scatter(
+                            x=[trial_data.loc[max_time, 'Time'], trial_data.loc[max_time, 'Time']],
+                            y=[trial_data['Shoulder Angular Velocity'].min(), trial_data['Shoulder Angular Velocity'].max()],
+                            mode='lines',
+                            line=dict(color=pit_kinematic_colors[col], dash='dot'),
+                            name=f'{trial}번째',
+                            showlegend=False
+                        ))
+
+                        traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=pit_kinematic_colors[col])))
+
+                traces.append(go.Scatter(
+                    x=[375, 375],
+                    y=[trial_data[col].min(), trial_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+
             graphs.append(html.Div([
-                html.Div(html.Img(src=pit_src_name["Kinematic Sequence"], style={'width': '15%', 'float': 'left', 'marginTop': '95px'}), style={'backgroundColor': '#074CA1'}),
-                html.Div(dcc.Graph(
-                    figure={
+                html.Div(
+                    style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                    children=[
+                        html.Div(
+                            html.Img(src=pit_src_name["Kinematic Sequence"], style={'padding' : '1%', 'width': '100%'}),
+                            style={'width': '13%', 'backgroundColor': '#2B303D'}
+                        ),
+                dcc.Graph(figure={
                         'data': traces,
                         'layout': go.Layout(
-                            title="Kinematic Sequence",
-                            xaxis_title='Time',
-                            yaxis_title='Value',
+                            title="키네마틱 시퀀스",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 375, 500],
+                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': '각속도',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
                             hovermode='closest',
                             showlegend=False,
-                            paper_bgcolor='#074CA1',
-                            plot_bgcolor='#C0C0C0',
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
                             font=dict(color='white')
                         )
-                    }
-                ), style={'width': '85%', 'float': 'right'})
-            ], style={'clear': 'both', 'backgroundColor': '#074CA1'}))
+                    },
+                    style={'width': '85%'}
+                )
+                    ]
+                )], style={'backgroundColor': '#252934'}
+            ))
 
-        elif selected_report == 'batter':
+        elif selected_report == 'hitter':
             if consistency_mean == 'mean':
-                mean_data = filtered_data.groupby('Time').mean().reset_index()
+                mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
                 for col in hit_kinematic_columns:
-                    traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'Mean {col}', line=dict(color=hit_kinematic_colors[col])))
-            else:
-                for col in hit_kinematic_columns:
-                    for idx, trial in enumerate(selected_trials):
-                        trial_data = filtered_data[filtered_data['Trial'] == trial]
-                        color = hit_kinematic_colors[col]
-                        traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{col} - Trial {trial}', line=dict(color=color)))
+                    traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_kinematic_colors[col])))
+                    min_values.append(mean_data[col].min())
+                    max_values.append(mean_data[col].max())
 
-            # Create a graph for the Kinematic Sequence
+                min_of_mins = min(min_values)
+                max_of_maxes = max(max_values)
+                for col in hit_kinematic_columns:
+                    max_time = mean_data.loc[mean_data.index[mean_data[col] == mean_data[col].max()][0], 'Time']
+                    traces.append(go.Scatter(
+                        x=[max_time, max_time],
+                        y=[min_of_mins, max_of_maxes],
+                        mode='lines',
+                        line=dict(color=hit_kinematic_colors[col], dash='dot'),
+                        showlegend=False
+                    ))
+
+                traces.append(go.Scatter(
+                    x=[1500, 1500],
+                    y=[min_of_mins, max_of_maxes],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+            else:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    for col in hit_kinematic_columns:
+                        max_time = trial_data.index[trial_data[col] == trial_data[col].max()][0]
+                        max_value = trial_data[col].max()
+                        min_value = trial_data[col].min()
+                        min_values.append(min_value)
+                        max_values.append(max_value)
+                        traces.append(go.Scatter(
+                            x=[trial_data.loc[max_time, 'Time'], trial_data.loc[max_time, 'Time']],
+                            y=[trial_data['Arm Angular Velocity'].min(), trial_data['Arm Angular Velocity'].max()],
+                            mode='lines',
+                            line=dict(color=hit_kinematic_colors[col], dash='dot'),
+                            name=f'{trial}번째',
+                            showlegend=False
+                        ))
+
+                        traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_kinematic_colors[col])))
+
+                traces.append(go.Scatter(
+                    x=[1500, 1500],
+                    y=[trial_data[col].min(), trial_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+
             graphs.append(html.Div([
-                html.Div(html.Img(src=hit_src_name["Kinematic Sequence"], style={'width': '15%', 'float': 'left', 'marginTop': '95px'}), style={'backgroundColor': '#074CA1'}),
-                html.Div(dcc.Graph(
-                    figure={
+                html.Div(
+                    style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                    children=[
+                        html.Div(
+                            html.Img(src=hit_src_name["Kinematic Sequence"], style={'padding' : '1%', 'width': '100%'}),
+                            style={'width': '13%', 'backgroundColor': '#2B303D'}
+                        ),
+                dcc.Graph(figure={
                         'data': traces,
                         'layout': go.Layout(
-                            title="Kinematic Sequence",
-                            xaxis_title='Time',
-                            yaxis_title='Value',
+                            title="키네마틱 시퀀스",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 1500, 2000],
+                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': '각속도',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
                             hovermode='closest',
                             showlegend=False,
-                            paper_bgcolor='#074CA1',
-                            plot_bgcolor='#C0C0C0',
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
                             font=dict(color='white')
                         )
-                    }
-                ), style={'width': '85%', 'float': 'right'})
-            ], style={'clear': 'both', 'backgroundColor': '#074CA1'}))
-
+                    },
+                    style={'width': '85%'}
+                )
+                    ]
+                )], style={'backgroundColor': '#252934'}
+            ))
         selected_vars.remove("Kinematic Sequence")
     
     if "GRF" in selected_vars:
         traces = []
 
-        if selected_report == 'batter':
-            if consistency_mean == 'mean':
-                # Compute mean for each of the kinematic columns
-                mean_data = filtered_data.groupby('Time').mean().reset_index()
-                for col in hit_GRF_columns:
-                    traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'Mean {col}', line=dict(color=hit_GRF_colors[col])))
-            else:
-                for col in hit_GRF_columns:
-                    for idx, trial in enumerate(selected_trials):
-                        trial_data = filtered_data[filtered_data['Trial'] == trial]
-                        color = hit_GRF_colors[col]
-                        traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{col} - Trial {trial}', line=dict(color=color)))
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_GRF_colors[col])))
+                traces.append(go.Scatter(
+                    x=[1500, 1500],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            for col in hit_GRF_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_GRF_colors[col])))
+                    traces.append(go.Scatter(
+                        x=[1500, 1500],
+                        y=[trial_data[col].min(), trial_data[col].max()],
+                        mode='lines',
+                        line=dict(color='#FFFFFF'),
+                        hoverinfo='text',
+                        hovertext=f'FC',
+                        showlegend=False
+                    ))
 
-            # Create a graph for the Kinematic Sequence
-            graphs.append(html.Div([
-                html.Div(html.Img(src=hit_src_name["GRF"], style={'width': '15%', 'float': 'left', 'marginTop': '95px'}), style={'backgroundColor': '#2B303D'}),
-                html.Div(dcc.Graph(
-                    figure={
-                        'data': traces,
-                        'layout': go.Layout(
-                            title="GRF",
-                            xaxis_title='Time',
-                            yaxis_title='Value',
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["GRF"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="지면 반력",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 1500, 2000],
+                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
                             hovermode='closest',
                             showlegend=False,
-                            paper_bgcolor='#074CA1',
-                            plot_bgcolor='#C0C0C0',
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
                             font=dict(color='white')
                         )
-                    }
-                ), style={'width': '85%', 'float': 'right'})
-            ], style={'clear': 'both', 'backgroundColor': '#074CA1'}))
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
 
         selected_vars.remove("GRF")
     
     for col in selected_vars:
         traces = []
 
-        # If "consistency" is selected, plot each trial separately
         if consistency_mean == 'consistency':
             if selected_report == 'pitcher':
                 traces.append(go.Scatter(x=pit_avg['Time'], y=pit_avg[col] + pit_std[col], mode='lines', fill=None, line_color='rgba(0,100,80,0.2)', showlegend=False))
                 traces.append(go.Scatter(x=pit_avg['Time'], y=pit_avg[col] - pit_std[col], mode='lines', fill='tonexty', line_color='rgba(0,100,80,0.2)', showlegend=False))
+
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    color = custom_palette[idx % len(custom_palette)]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
+
+                traces.append(go.Scatter(
+                    x=[377, 377],
+                    y=[trial_data[col].min(), trial_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
                 
-            elif selected_report == 'batter':
+            elif selected_report == 'hitter':
                 traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] + hit_std[col], mode='lines', fill=None, line_color='rgba(0,100,80,0.2)', showlegend=False))
                 traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] - hit_std[col], mode='lines', fill='tonexty', line_color='rgba(0,100,80,0.2)', showlegend=False))
 
-            for idx, trial in enumerate(selected_trials):
-                trial_data = filtered_data[filtered_data['Trial'] == trial]
-                color = custom_palette[idx % len(custom_palette)]
-                traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'Trial {trial}', line=dict(color=color)))
-                
-                fc_time = trial_data['FC'].iloc[0]
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    color = custom_palette[idx % len(custom_palette)]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
+
                 traces.append(go.Scatter(
-                    x=[fc_time, fc_time],
+                    x=[1500, 1500],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
-                    line=dict(color='#fffcc3'),
-                    hoverinfo='text',  # Display custom hover text
-                    hovertext=f'Trial {trial} FC',  # Custom hover text
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
                     showlegend=False
                 ))
-
+                
         elif consistency_mean == 'mean':
-            mean_data = filtered_data.groupby('Time').mean().reset_index()
-            traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'Mean {col}', line=dict(color='#ffff99')))
+            if selected_report == 'pitcher':
+                tmp_k = [377, 377]
+            elif selected_report == 'hitter':
+                tmp_k = [1500, 1500]
+
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균값', line=dict(color='#9CAFDE')))
+            traces.append(go.Scatter(
+                    x=tmp_k,
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
         
         if selected_report == 'pitcher':
             tmp_src = pit_src_name.get(col, "")
-        elif selected_report == 'batter':
+            graph_title = pit_col_name.get(col, "")
+            tv = [0, 375, 500]
+            tt = ['0s', '1.5s (FC)', '2s']
+        elif selected_report == 'hitter':
             tmp_src = hit_src_name.get(col, "")
+            graph_title = hit_col_name.get(col, "")
+            tv = [0, 1500, 2000]
+            tt = ['0s', '1.5s (FC)', '2s']
 
         graphs.append(html.Div([
-            html.Img(src=tmp_src, style={'width': '15%', 'float': 'left', 'marginTop': '90px'}),
-            html.Div(dcc.Graph(
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=tmp_src, style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
                 figure={
                     'data': traces,
                     'layout': go.Layout(
-                        title=col,
-                        xaxis_title='Time',
-                        yaxis_title='Value',
+                        title=graph_title,
+                        xaxis={
+                            'title': '시간',
+                            'tickvals': tv,
+                            'ticktext': tt,
+                            'showline': True,
+                            'showgrid': False,
+                            'showticklabels': True,
+                            'color': 'white',
+                            'linecolor': 'white',
+                        },
+                        yaxis={
+                            'title': '각도',
+                            'zeroline': True,
+                            'zerolinecolor': '#808080',
+                            'showline': True,
+                            'showgrid': True,
+                            'showticklabels': True,
+                            'color': 'white',
+                            'linecolor': 'white',
+                        },
                         hovermode='closest',
                         showlegend=False,
-                        paper_bgcolor='#074CA1',
-                        plot_bgcolor='#C0C0C0',
+                        paper_bgcolor='#2B303D',
+                        plot_bgcolor='#2B303D',
                         font=dict(color='white')
                     )
-                }
-            ), style={'width': '85%', 'float': 'right'})
-        ], style={'clear': 'both', 'backgroundColor': '#074CA1'}))
- 
+                },
+                style={'width': '85%'}
+            )
+                ]
+            )], style={'backgroundColor': '#252934', 'marginTop': '80px'}
+        ))
+
     return graphs
 
 
 # Run the app
 if __name__ == '__main__':
-
     app.run_server(debug=True)
