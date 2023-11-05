@@ -191,7 +191,7 @@ app.layout = html.Div([
                dd.State('pwd-box', 'value')])
 def login(n_clicks, username, password):
     if n_clicks > 0:
-        if username == 'id' and password == 'password':  # Replace with your own validation logic
+        if username == 'samsung' and password == 'kmu2023!':  # Replace with your own validation logic
             return report_layout
         else:
             return login_layout
