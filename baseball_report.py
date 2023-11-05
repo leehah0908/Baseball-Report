@@ -710,7 +710,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 
         elif consistency_mean == 'mean':
             if selected_report == 'pitcher':
-                tmp_k = [377, 377]
+                tmp_k = [270, 270]
             elif selected_report == 'hitter':
                 tmp_k = [1500, 1500]
 
