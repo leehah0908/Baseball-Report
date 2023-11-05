@@ -125,41 +125,8 @@ app = dash.Dash(__name__)
 app.title = ("KMU Baseball Report")
 server = app.server
 
-USER_LOGGED_IN = False
-
 # 2. Layout
-login_layout = html.Div([
-    dcc.Location(id='url-login', refresh=True),
-    html.Div([
-        html.Div([
-            html.Div([
-                dcc.Input(
-                    placeholder='Enter your username',
-                    type='text',
-                    id='uname-box',
-                    className='uname_box'
-                ),
-                dcc.Input(
-                    placeholder='Enter your password',
-                    type='password',
-                    id='pwd-box',
-                    className='pwd_box'
-                ),
-                html.Button(
-                    children='Login',
-                    n_clicks=0,
-                    type='submit',
-                    id='login-button',
-                    className='login_button'
-                ),
-                html.Div(children='', id='output-state')
-            ], className='form_container'),
-        ], className='login_container'),
-    ], className='login_page')
-])
-
-report_layout = html.Div([
-    dcc.Location(id='url-report', refresh=True),
+app.layout = html.Div([
     html.Div(id='report-selection', children=[
         html.H1("레포트 유형 선택", style={'color': 'white', 'fontFamily': 'Verdana'}),
     
@@ -176,36 +143,10 @@ report_layout = html.Div([
         html.Button("뒤로 가기", id="back-button", style={'display': 'none'})
         ]),
     
-    html.Div(id='report-dashboard'),
-    html.Button('Logout', id='logout-button', n_clicks=0)
+    html.Div(id='report-dashboard')
     ], style={'padding' : '20px', 'backgroundColor': '#313746'})
 
-app.layout = html.Div([
-    html.Div(id='page-content', children=login_layout)
-])
-
 # 3. Callbacks
-@app.callback(dd.Output('page-content', 'children'),
-              [dd.Input('login-button', 'n_clicks')],
-              [dd.State('uname-box', 'value'),
-               dd.State('pwd-box', 'value')])
-def login(n_clicks, username, password):
-    if n_clicks > 0:
-        if username == 'samsung' and password == 'kmu2023!':  # Replace with your own validation logic
-            return report_layout
-        else:
-            return login_layout
-    else:
-        return login_layout
-
-# 로그아웃 콜백
-@app.callback(dd.Output('url-report', 'pathname'),
-              [dd.Input('logout-button', 'n_clicks')])
-def logout(n_clicks):
-    if n_clicks > 0:
-        return '/login'
-    return '/report'
-
 @app.callback(
     [dd.Output('report-dashboard', 'children'),
      dd.Output('report-selection', 'style'),
