@@ -185,10 +185,10 @@ app.layout = html.Div([
 ])
 
 # 3. Callbacks
-@app.callback(Output('page-content', 'children'),
-              [Input('login-button', 'n_clicks')],
-              [State('uname-box', 'value'),
-               State('pwd-box', 'value')])
+@app.callback(dd.Output('page-content', 'children'),
+              [dd.Input('login-button', 'n_clicks')],
+              [dd.State('uname-box', 'value'),
+               dd.State('pwd-box', 'value')])
 def login(n_clicks, username, password):
     if n_clicks > 0:
         if username == 'id' and password == 'password':  # Replace with your own validation logic
@@ -199,8 +199,8 @@ def login(n_clicks, username, password):
         return login_layout
 
 # 로그아웃 콜백
-@app.callback(Output('url-report', 'pathname'),
-              [Input('logout-button', 'n_clicks')])
+@app.callback(dd.Output('url-report', 'pathname'),
+              [dd.Input('logout-button', 'n_clicks')])
 def logout(n_clicks):
     if n_clicks > 0:
         return '/login'
