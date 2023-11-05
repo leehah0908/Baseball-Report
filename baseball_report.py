@@ -680,7 +680,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
 
                 traces.append(go.Scatter(
-                    x=[377, 377],
+                    x=[270, 270],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
