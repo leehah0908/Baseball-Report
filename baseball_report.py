@@ -559,7 +559,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             xaxis={
                                 'title': '시간',
                                 'tickvals': [0, 1125, 1500],
-                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -637,7 +637,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             xaxis={
                                 'title': '시간',
                                 'tickvals': [0, 1125, 1500],
-                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -735,7 +735,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             tmp_src = hit_src_name.get(col, "")
             graph_title = hit_col_name.get(col, "")
             tv = [0, 1125, 1500]
-            tt = ['0s', '1.5s (FC)', '2s']
+            tt = ['0s', '1.125s (FC)', '1.5s']
 
         graphs.append(html.Div([
             html.Div(
