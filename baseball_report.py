@@ -402,7 +402,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     ))
 
                 traces.append(go.Scatter(
-                    x=[375, 375],
+                    x=[270, 270],
                     y=[min_of_mins, max_of_maxes],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -431,7 +431,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                         traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=pit_kinematic_colors[col])))
 
                 traces.append(go.Scatter(
-                    x=[375, 375],
+                    x=[270, 270],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -454,7 +454,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             title="키네마틱 시퀀스",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 375, 500],
+                                'tickvals': [0, 270, 360],
                                 'ticktext': ['0s', '1.5s (FC)', '2s'],
                                 'showline': True,
                                 'showgrid': False,
@@ -680,7 +680,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
 
                 traces.append(go.Scatter(
-                    x=[377, 377],
+                    x=[270, 270],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -710,7 +710,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 
         elif consistency_mean == 'mean':
             if selected_report == 'pitcher':
-                tmp_k = [377, 377]
+                tmp_k = [270, 270]
             elif selected_report == 'hitter':
                 tmp_k = [1500, 1500]
 
@@ -729,7 +729,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         if selected_report == 'pitcher':
             tmp_src = pit_src_name.get(col, "")
             graph_title = pit_col_name.get(col, "")
-            tv = [0, 375, 500]
+            tv = [0, 270, 360]
             tt = ['0s', '1.5s (FC)', '2s']
         elif selected_report == 'hitter':
             tmp_src = hit_src_name.get(col, "")
