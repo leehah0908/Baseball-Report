@@ -8,11 +8,11 @@ import os
 
 folder_path = 'Data/'
 
-pit_path = folder_path + 'Processed Data/Pitching Data'
+pit_path = folder_path + 'pi_da'
 pit_all_files = [f for f in os.listdir(pit_path) if f.endswith('.csv')]
 pit_players = list(set([f.split('_')[0] for f in pit_all_files]))
 
-hit_path = folder_path + 'Processed Data/Hitting Data'
+hit_path = folder_path + 'hi_da'
 hit_all_files = [f for f in os.listdir(hit_path) if f.endswith('.csv')]
 hit_players = list(set([f.split('_')[0] for f in hit_all_files]))
 
@@ -76,9 +76,9 @@ pit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
                     'Elbow Angular Velocity': '#e9c46a',
                     'Shoulder Angular Velocity': '#3a86ff'}
 
-hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'Shoulder Horizontal Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FF1hNM%2FbtsyXZNSsG0%2FqHcaFPr3U5IqKBP8enGdlk%2Fimg.png",
-            'Shoulder Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYPj8D%2Fbtsy4b0PjGT%2FacxybeGX01XUgjOW3KzTuk%2Fimg.png",
+hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4QSYr%2FbtszKx4EmDw%2FoEbJRQgXe56wRqR1BjAee0%2Fimg.png",
+            'Shoulder Horizontal Abduction' : "",
+            'Shoulder Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbu0HRk%2FbtszLvkxY7F%2FlbP0XJJLphKY8bORAyQgXk%2Fimg.png",
             'Elbow Flexion' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcA5uIp%2FbtsyTXXzk3H%2F3gvShC3j2W5dpkP6oSn6qK%2Fimg.png",
             'Torso Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbMNU1k%2FbtsyTxEQCGe%2FazjHlTudjOQJdjkMd45RBK%2Fimg.png",
             'Torso Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZ68RV%2FbtsyU4h6MxZ%2FLMfDEMRO2rtfncrGKPkiE1%2Fimg.png",
@@ -87,7 +87,9 @@ hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R128
             'Pelvis Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8xB5Z%2Fbtsy4i6t7rz%2F6PbsxYYtYkrS1Y1lzxKMnk%2Fimg.png",
             'Pelvis Rotation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8xB5Z%2Fbtsy4i6t7rz%2F6PbsxYYtYkrS1Y1lzxKMnk%2Fimg.png",
             'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png"}
+            'Total GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
+            'lead GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
+            'rear GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png"}
 
 hit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Shoulder Horizontal Abduction' : "어깨 수평 벌림 각도",
@@ -100,25 +102,37 @@ hit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Pelvis Forward Tilt' : "앞쪽 골반 기울기",
             'Pelvis Rotation' : "골반 회전 각도",
             'Kinematic Sequence' : "키네마틱 시퀀스",
-            'GRF' : "지면 반력",
-            'COP Velocity' : '압력 중심점 이동 속도'}
-
+            'Total GRF' : "전체 지면 반력",
+            'lead GRF' : "앞발 지면 반력",
+            'rear GRF' : "뒷발 지면 반력"}
 
 hit_kinematic_columns = ['Pelvis Angular Velocity',
                          'Torso Angular Velocity',
                          'Arm Angular Velocity']
-
 hit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
                         'Torso Angular Velocity': '#2a9d8f',
                         'Arm Angular Velocity': '#3a86ff'}
 
-hit_GRF_columns = ['Front Vertical Force',
-                         'Back Vertical Force',
-                         'Total Vertical Force']
+hit_total_GRF_columns = ['Total Force X',
+                         'Total Force Y',
+                         'Total Force Z']
+hit_total_GRF_colors =  {'Total Force X': '#e63946',
+                         'Total Force Y': '#2a9d8f',
+                         'Total Force Z': '#3a86ff'}
 
-hit_GRF_colors = {'Front Vertical Force': '#e63946',
-                        'Back Vertical Force': '#2a9d8f',
-                        'Total Vertical Force': '#3a86ff'}
+hit_lead_GRF_columns = ['Front Force X',
+                        'Front Force Y',
+                        'Front Force Z']
+hit_lead_GRF_colors =  {'Front Force X': '#e63946',
+                        'Front Force Y': '#2a9d8f',
+                        'Front Force Z': '#3a86ff'}
+
+hit_rear_GRF_columns = ['Back Force X',
+                        'Back Force Y',
+                        'Back Force Z']
+hit_rear_GRF_colors =  {'Back Force X': '#e63946',
+                        'Back Force Y': '#2a9d8f',
+                        'Back Force Z': '#3a86ff'}
 
 # Initialization
 app = dash.Dash(__name__)
@@ -291,10 +305,16 @@ def update_checklists(selected_player, selected_report):
             html.Button("전체 해제", id="clear-all-variables")
         ])
  
-        columns_to_exclude = ['Time', 'Trial', 'Name', 'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity', 'Front Vertical Force', 'Back Vertical Force', 'Total Vertical Force']
+        columns_to_exclude = ['Time', 'Trial', 'Name',
+                              'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity',
+                              'Total Force X', 'Total Force Y', 'Total Force Z',
+                              'Front Force X', 'Front Force Y', 'Front Force Z',
+                              'Back Force X', 'Back Force Y', 'Back Force Z']
         variable_options = [col for col in player_data.columns if col not in columns_to_exclude]
         variable_options.append('Kinematic Sequence')
-        variable_options.append('GRF')
+        variable_options.append('Total GRF')
+        variable_options.append('lead GRF')
+        variable_options.append('rear GRF')
 
         variables_checklist = dcc.Checklist(
             id='variables-checklist',
@@ -590,13 +610,13 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             ))
         selected_vars.remove("Kinematic Sequence")
     
-    if "GRF" in selected_vars:
+    if "Total GRF" in selected_vars:
         traces = []
 
         if consistency_mean == 'mean':
             mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
-            for col in hit_GRF_columns:
-                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_GRF_colors[col])))
+            for col in hit_total_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_total_GRF_colors[col])))
                 traces.append(go.Scatter(
                     x=[1125, 1125],
                     y=[mean_data[col].min(), mean_data[col].max()],
@@ -607,33 +627,37 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     showlegend=False
                 ))
         else:
-            for col in hit_GRF_columns:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_total_GRF_columns:
                 for idx, trial in enumerate(selected_trials):
                     trial_data = filtered_data[filtered_data['Trial'] == trial]
-                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_GRF_colors[col])))
-                    traces.append(go.Scatter(
-                        x=[1125, 1125],
-                        y=[trial_data[col].min(), trial_data[col].max()],
-                        mode='lines',
-                        line=dict(color='#FFFFFF'),
-                        hoverinfo='text',
-                        hovertext=f'FC',
-                        showlegend=False
-                    ))
-
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_total_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+                traces.append(go.Scatter(
+                    x=[1125, 1125],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+         
         graphs.append(html.Div([
             html.Div(
                 style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
                 children=[
                     html.Div(
-                        html.Img(src=hit_src_name["GRF"], style={'padding': '1%', 'width': '100%'}),
+                        html.Img(src=hit_src_name["Total GRF"], style={'padding': '1%', 'width': '100%'}),
                         style={'width': '13%', 'backgroundColor': '#2B303D'}
                     ),
             dcc.Graph(
                 figure={
                     'data': traces,
                     'layout': go.Layout(
-                            title="지면 반력",
+                            title="전체 지면 반력",
                             xaxis={
                                 'title': '시간',
                                 'tickvals': [0, 1125, 1500],
@@ -664,7 +688,169 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             )])
         ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
 
-        selected_vars.remove("GRF")
+        selected_vars.remove("Total GRF")
+                    
+    if "lead GRF" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_lead_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_lead_GRF_colors[col])))
+                traces.append(go.Scatter(
+                    x=[1125, 1125],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_lead_GRF_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_lead_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+                traces.append(go.Scatter(
+                    x=[1125, 1125],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["lead GRF"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="앞발 지면 반력",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 1125, 1500],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("lead GRF")
+
+
+
+    if "rear GRF" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_rear_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_rear_GRF_colors[col])))
+                traces.append(go.Scatter(
+                    x=[1125, 1125],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_rear_GRF_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_rear_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+
+                traces.append(go.Scatter(
+                    x=[1125, 1125],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))   
+
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["rear GRF"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="뒷발 지면 반력",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 1125, 1500],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("rear GRF")
     
     for col in selected_vars:
         traces = []
