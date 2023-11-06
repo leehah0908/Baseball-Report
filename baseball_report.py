@@ -8,11 +8,11 @@ import os
 
 folder_path = 'Data/'
 
-pit_path = folder_path + 'pi_da'
+pit_path = folder_path + 'Processed Data/Pitching Data'
 pit_all_files = [f for f in os.listdir(pit_path) if f.endswith('.csv')]
 pit_players = list(set([f.split('_')[0] for f in pit_all_files]))
 
-hit_path = folder_path + 'hi_da'
+hit_path = folder_path + 'Processed Data/Hitting Data'
 hit_all_files = [f for f in os.listdir(hit_path) if f.endswith('.csv')]
 hit_players = list(set([f.split('_')[0] for f in hit_all_files]))
 
