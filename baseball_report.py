@@ -125,7 +125,7 @@ hit_lead_GRF_columns = ['Front Force X',
                         'Front Force Z']
 hit_lead_GRF_colors =  {'Front Force X': '#e63946',
                         'Front Force Y': '#2a9d8f',
-                        'Front Force Z': '#3a86ff'}
+                        'Front Force Z': '#3a86ff' }
 
 hit_rear_GRF_columns = ['Back Force X',
                         'Back Force Y',
