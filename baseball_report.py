@@ -506,7 +506,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     ))
 
                 traces.append(go.Scatter(
-                    x=[1500, 1500],
+                    x=[1125, 1125],
                     y=[min_of_mins, max_of_maxes],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -535,7 +535,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                         traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_kinematic_colors[col])))
 
                 traces.append(go.Scatter(
-                    x=[1500, 1500],
+                    x=[1125, 1125],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -558,8 +558,8 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             title="키네마틱 시퀀스",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 1500, 2000],
-                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'tickvals': [0, 1125, 1500],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -598,7 +598,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             for col in hit_GRF_columns:
                 traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_GRF_colors[col])))
                 traces.append(go.Scatter(
-                    x=[1500, 1500],
+                    x=[1125, 1125],
                     y=[mean_data[col].min(), mean_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -612,7 +612,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     trial_data = filtered_data[filtered_data['Trial'] == trial]
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_GRF_colors[col])))
                     traces.append(go.Scatter(
-                        x=[1500, 1500],
+                        x=[1125, 1125],
                         y=[trial_data[col].min(), trial_data[col].max()],
                         mode='lines',
                         line=dict(color='#FFFFFF'),
@@ -636,8 +636,8 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             title="지면 반력",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 1500, 2000],
-                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'tickvals': [0, 1125, 1500],
+                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -699,7 +699,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
 
                 traces.append(go.Scatter(
-                    x=[1500, 1500],
+                    x=[1125, 1125],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -712,7 +712,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             if selected_report == 'pitcher':
                 tmp_k = [270, 270]
             elif selected_report == 'hitter':
-                tmp_k = [1500, 1500]
+                tmp_k = [1125, 1125]
 
             mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
             traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균값', line=dict(color='#9CAFDE')))
@@ -734,8 +734,8 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         elif selected_report == 'hitter':
             tmp_src = hit_src_name.get(col, "")
             graph_title = hit_col_name.get(col, "")
-            tv = [0, 1500, 2000]
-            tt = ['0s', '1.5s (FC)', '2s']
+            tv = [0, 1125, 1500]
+            tt = ['0s', '1.125s (FC)', '1.5s']
 
         graphs.append(html.Div([
             html.Div(
