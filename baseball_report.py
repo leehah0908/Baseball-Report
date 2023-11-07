@@ -63,7 +63,7 @@ pit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Elbow Flexion' : "팔꿈치 굽힘 각도",
             'Shoulder External Rotaion' : "어깨 외회전 각도",
             'Shoulder Horizontal Abduction' : "어깨 수평 벌림 각도",
-            'Shoulder Abduction' : "어깨 벌림 각도",
+            'Shoulder Abduction' : "어깨 측면 벌림 각도",
             'Lead Leg Knee Flexion' : "무릎 굽힘 각도",
             'Lead Leg Knee Extension Angular Velocity' : "무릎 폄속도",
             'Trunk Forward Tilt' : "앞쪽 몸통 기울기",
@@ -803,7 +803,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             html.Div(
                 style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
                 children=[
-                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Y 축(진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
                     html.Div(html.Label("Z 축(수직 방향)", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
                     ]),
             html.Div(
@@ -887,7 +887,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             html.Div(
                 style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
                 children=[
-                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Y 축(진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
                     html.Div(html.Label("Z 축(수직 방향)", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
                     ]),
             html.Div(
