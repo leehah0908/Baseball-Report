@@ -136,16 +136,6 @@ hit_rear_GRF_columns = ['Back Force Y',
 hit_rear_GRF_colors =  {'Back Force Y': '#2a9d8f',
                         'Back Force Z': '#3a86ff'}
 
-hit_lead_torque_columns = ['Front Torque X',
-                        'Front Torque Y']
-hit_lead_torque_colors =  {'Front Torque X': '#e63946',
-                        'Front Torque Y': '#2a9d8f'}
-
-hit_rear_torque_columns = ['Back Torque X',
-                        'Back Torque Y']
-hit_rear_torque_colors =  {'Back Torque X': '#e63946',
-                        'Back Torque Y': '#2a9d8f'}
-
 # Initialization
 app = dash.Dash(__name__)
 app.title = ("KMU Baseball Report")
@@ -321,17 +311,13 @@ def update_checklists(selected_player, selected_report):
                               'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity', 'Hand Angular Velocity',
                               'Total Force X', 'Total Force Y', 'Total Force Z',
                               'Front Force Y', 'Front Force Z',
-                              'Back Force Y', 'Back Force Z',
-                              'Front Torque X', 'Front Torque Y',
-                              'Back Torque X', 'Back Torque Y']
+                              'Back Force Y', 'Back Force Z']
         
         variable_options = [col for col in player_data.columns if col not in columns_to_exclude]
         variable_options.append('Kinematic Sequence')
         variable_options.append('Total GRF')
         variable_options.append('lead GRF')
         variable_options.append('rear GRF')
-        variable_options.append('Front Torque')
-        variable_options.append('Back Torque')
 
         variables_checklist = dcc.Checklist(
             id='variables-checklist',
@@ -808,180 +794,6 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
 
         selected_vars.remove("lead GRF")
-
-    if "Front Torque" in selected_vars:
-        traces = []
-
-        if consistency_mean == 'mean':
-            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
-            for col in hit_lead_torque_columns:
-                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_lead_torque_colors[col])))
-                traces.append(go.Scatter(
-                    x=[500, 500],
-                    y=[mean_data[col].min(), mean_data[col].max()],
-                    mode='lines',
-                    line=dict(color='#FFFFFF'),
-                    hoverinfo='text',
-                    hovertext=f'FC',
-                    showlegend=False
-                ))
-        else:
-            tmp_min = []
-            tmp_max = []
-            for col in hit_lead_torque_columns:
-                for idx, trial in enumerate(selected_trials):
-                    trial_data = filtered_data[filtered_data['Trial'] == trial]
-                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_lead_torque_colors[col])))
-                    tmp_min.append(trial_data[col].min())
-                    tmp_max.append(trial_data[col].max())
-
-                traces.append(go.Scatter(
-                    x=[500, 500],
-                    y=[min(tmp_min), max(tmp_max)],
-                    mode='lines',
-                    line=dict(color='#FFFFFF'),
-                    hoverinfo='text',
-                    hovertext=f'FC',
-                    showlegend=False
-                ))   
-
-        graphs.append(html.Div([
-            html.Div(
-                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
-                children=[
-                    html.Div(html.Label("X 축(스탠스시 정면 방향)", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
-                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
-                    ]),
-            html.Div(
-                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
-                children=[
-                    html.Div(
-                        html.Img(src=hit_src_name["Front Torque"], style={'padding': '1%', 'width': '100%'}),
-                        style={'width': '13%', 'backgroundColor': '#2B303D'}
-                    ),
-            dcc.Graph(
-                figure={
-                    'data': traces,
-                    'layout': go.Layout(
-                            title="앞발 토크",
-                            xaxis={
-                                'title': '시간',
-                                'tickvals': [0, 500, 1200],
-                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
-                                'showline': True,
-                                'showgrid': False,
-                                'showticklabels': True,
-                                'color': 'white',
-                                'linecolor': 'white',
-                            },
-                            yaxis={
-                                'title': 'N*m',
-                                'zeroline': True,
-                                'zerolinecolor': '#808080',
-                                'showline': True,
-                                'showgrid': True,
-                                'showticklabels': True,
-                                'color': 'white',
-                                'linecolor': 'white',
-                            },
-                            hovermode='closest',
-                            showlegend=False,
-                            paper_bgcolor='#2B303D',
-                            plot_bgcolor='#2B303D',
-                            font=dict(color='white')
-                        )
-                }, style={'width': '85%'}
-            )])
-        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
-
-        selected_vars.remove("Front Torque")
-
-    if "Back Torque" in selected_vars:
-        traces = []
-
-        if consistency_mean == 'mean':
-            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
-            for col in hit_rear_torque_columns:
-                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_rear_torque_colors[col])))
-                traces.append(go.Scatter(
-                    x=[500, 500],
-                    y=[mean_data[col].min(), mean_data[col].max()],
-                    mode='lines',
-                    line=dict(color='#FFFFFF'),
-                    hoverinfo='text',
-                    hovertext=f'FC',
-                    showlegend=False
-                ))
-        else:
-            tmp_min = []
-            tmp_max = []
-            for col in hit_rear_torque_columns:
-                for idx, trial in enumerate(selected_trials):
-                    trial_data = filtered_data[filtered_data['Trial'] == trial]
-                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_rear_torque_colors[col])))
-                    tmp_min.append(trial_data[col].min())
-                    tmp_max.append(trial_data[col].max())
-
-                traces.append(go.Scatter(
-                    x=[500, 500],
-                    y=[min(tmp_min), max(tmp_max)],
-                    mode='lines',
-                    line=dict(color='#FFFFFF'),
-                    hoverinfo='text',
-                    hovertext=f'FC',
-                    showlegend=False
-                ))   
-
-        graphs.append(html.Div([
-            html.Div(
-                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
-                children=[
-                    html.Div(html.Label("X 축(스탠스시 정면 방향)", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
-                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
-                    ]),
-            html.Div(
-                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
-                children=[
-                    html.Div(
-                        html.Img(src=hit_src_name["Back Torque"], style={'padding': '1%', 'width': '100%'}),
-                        style={'width': '13%', 'backgroundColor': '#2B303D'}
-                    ),
-            dcc.Graph(
-                figure={
-                    'data': traces,
-                    'layout': go.Layout(
-                            title="뒷발 토크",
-                            xaxis={
-                                'title': '시간',
-                                'tickvals': [0, 500, 1200],
-                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
-                                'showline': True,
-                                'showgrid': False,
-                                'showticklabels': True,
-                                'color': 'white',
-                                'linecolor': 'white',
-                            },
-                            yaxis={
-                                'title': 'N*m',
-                                'zeroline': True,
-                                'zerolinecolor': '#808080',
-                                'showline': True,
-                                'showgrid': True,
-                                'showticklabels': True,
-                                'color': 'white',
-                                'linecolor': 'white',
-                            },
-                            hovermode='closest',
-                            showlegend=False,
-                            paper_bgcolor='#2B303D',
-                            plot_bgcolor='#2B303D',
-                            font=dict(color='white')
-                        )
-                }, style={'width': '85%'}
-            )])
-        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
-
-        selected_vars.remove("Back Torque")
         
     if "rear GRF" in selected_vars:
         traces = []
@@ -1094,9 +906,11 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 ))
                 
             elif selected_report == 'hitter':
-                traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] + hit_std[col], mode='lines', fill=None, line_color='rgba(0,100,80,0.2)', showlegend=False))
-                traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] - hit_std[col], mode='lines', fill='tonexty', line_color='rgba(0,100,80,0.2)', showlegend=False))
-
+                try:
+                    traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] + hit_std[col], mode='lines', fill=None, line_color='rgba(0,100,80,0.2)', showlegend=False))
+                    traces.append(go.Scatter(x=hit_avg['Time'], y=hit_avg[col] - hit_std[col], mode='lines', fill='tonexty', line_color='rgba(0,100,80,0.2)', showlegend=False))
+                except:
+                    pass
                 for idx, trial in enumerate(selected_trials):
                     trial_data = filtered_data[filtered_data['Trial'] == trial]
                     color = custom_palette[idx % len(custom_palette)]
