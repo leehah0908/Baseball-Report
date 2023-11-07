@@ -16,11 +16,11 @@ hit_path = folder_path + 'Processed Data/Hitting Data'
 hit_all_files = [f for f in os.listdir(hit_path) if f.endswith('.csv')]
 hit_players = list(set([f.split('_')[0] for f in hit_all_files]))
 
-pit_avg = pd.read_csv(folder_path + 'Driveline_Pitching_Timenormalize_avg.csv')
-pit_std = pd.read_csv(folder_path + 'Driveline_Pitching_Timenormalize_std.csv')
+pit_avg = pd.read_csv(folder_path + 'Processed Data/Driveline_Pitching_Timenormalize_avg.csv')
+pit_std = pd.read_csv(folder_path + 'Processed Data/Driveline_Pitching_Timenormalize_std.csv')
 
-hit_avg = pd.read_csv(folder_path + 'Driveline_Hitting_Timenormalize_avg.csv')
-hit_std = pd.read_csv(folder_path + 'Driveline_Hitting_Timenormalize_std.csv')
+hit_avg = pd.read_csv(folder_path + 'Processed Data/Driveline_Hitting_Timenormalize_avg.csv')
+hit_std = pd.read_csv(folder_path + 'Processed Data/Driveline_Hitting_Timenormalize_std.csv')
 
 pit_data = []
 for idx, file in enumerate(pit_all_files, 1):
