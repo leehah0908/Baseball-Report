@@ -886,7 +886,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         if col in '토크':
             y_name = 'N*m'
         else:
-            y_name = '각도'
+            y_name = 'aa'
         traces = []
 
         if consistency_mean == 'consistency':
