@@ -54,10 +54,10 @@ pit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R128
             'Trunk Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbbxkIS%2FbtsyYpFwfBU%2FNGGK8ebdS8iVWTmUxwNKr0%2Fimg.png",
             'Trunk Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb4GH1Z%2Fbtsy3OSltlF%2FqGNLUkvxLZfIeupKkjoox1%2Fimg.png",
             'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'lead GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fq3m5O%2FbtszKEvDKF4%2FILXjzpWCcnlI7l4LxoIrf0%2Fimg.png",
+            'lead GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAQnHs%2FbtszXI4RA7x%2FAfxW756uiWokraGpuBxlv0%2Fimg.png",
             'rear GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fm4fat%2FbtszOOxevuR%2FXZqpzvqUunaJNYDjKKaVIK%2Fimg.png",
             'Back Torque' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fyrqf2%2FbtszUt0J4zM%2FurvhjFMQexFx4MuLjRB4X0%2Fimg.png",
-            'Front Torque' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbn77X%2FbtszLjFykB9%2FdiQ21qquBWdwRzssAgGPE1%2Fimg.png"}
+            'Front Torque' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbdUEuM%2FbtszUrwiyDi%2FXUKiu6i5YnbW9NiaZ0F6o0%2Fimg.png"}
 
 pit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Elbow Flexion' : "팔꿈치 굽힘 각도",
