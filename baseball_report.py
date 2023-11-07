@@ -145,6 +145,7 @@ hit_rear_torque_columns = ['Back Torque X',
                         'Back Torque Y']
 hit_rear_torque_colors =  {'Back Torque X': '#e63946',
                         'Back Torque Y': '#2a9d8f'}
+
 # Initialization
 app = dash.Dash(__name__)
 app.title = ("KMU Baseball Report")
