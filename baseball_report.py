@@ -883,6 +883,10 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         selected_vars.remove("rear GRF")
     
     for col in selected_vars:
+        if col in '토크':
+            y_name = 'N*m'
+        else:
+            y_name = '각도'
         traces = []
 
         if consistency_mean == 'consistency':
@@ -979,7 +983,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             'linecolor': 'white',
                         },
                         yaxis={
-                            'title': '각도',
+                            'title': y_name,
                             'zeroline': True,
                             'zerolinecolor': '#808080',
                             'showline': True,
