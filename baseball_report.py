@@ -883,10 +883,10 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         selected_vars.remove("rear GRF")
     
     for col in selected_vars:
-        if col in '토크':
+        if '토크' in col:
             y_name = 'N*m'
         else:
-            y_name = 'aa'
+            y_name = '각도'
         traces = []
 
         if consistency_mean == 'consistency':
