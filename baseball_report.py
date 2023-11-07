@@ -76,18 +76,22 @@ pit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
                     'Elbow Angular Velocity': '#e9c46a',
                     'Shoulder Angular Velocity': '#3a86ff'}
 
-hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'Shoulder Horizontal Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FF1hNM%2FbtsyXZNSsG0%2FqHcaFPr3U5IqKBP8enGdlk%2Fimg.png",
-            'Shoulder Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYPj8D%2Fbtsy4b0PjGT%2FacxybeGX01XUgjOW3KzTuk%2Fimg.png",
-            'Elbow Flexion' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcA5uIp%2FbtsyTXXzk3H%2F3gvShC3j2W5dpkP6oSn6qK%2Fimg.png",
-            'Torso Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbMNU1k%2FbtsyTxEQCGe%2FazjHlTudjOQJdjkMd45RBK%2Fimg.png",
-            'Torso Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZ68RV%2FbtsyU4h6MxZ%2FLMfDEMRO2rtfncrGKPkiE1%2Fimg.png",
-            'Torso Rotation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAISc3%2FbtsyViAqe0j%2FqkKnVXFoxKbWz5maT1McHK%2Fimg.png",
-            'Pelvis Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8xB5Z%2Fbtsy4i6t7rz%2F6PbsxYYtYkrS1Y1lzxKMnk%2Fimg.png",
-            'Pelvis Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8xB5Z%2Fbtsy4i6t7rz%2F6PbsxYYtYkrS1Y1lzxKMnk%2Fimg.png",
-            'Pelvis Rotation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8xB5Z%2Fbtsy4i6t7rz%2F6PbsxYYtYkrS1Y1lzxKMnk%2Fimg.png",
-            'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png",
-            'GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbyb824%2FbtsyV1Stif0%2FiEXEHXjrkcKNNoPltvHAIK%2Fimg.png"}
+hit_src_name = {'Hip/Shoulder Separation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4QSYr%2FbtszKx4EmDw%2FoEbJRQgXe56wRqR1BjAee0%2Fimg.png",
+            'Shoulder Horizontal Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd5QOQH%2FbtszLqXYqCf%2FHMGNbvYsC4IItekw5sMXw1%2Fimg.png",
+            'Shoulder Abduction' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbu0HRk%2FbtszLvkxY7F%2FlbP0XJJLphKY8bORAyQgXk%2Fimg.png",
+            'Elbow Flexion' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb4AxbI%2FbtszK6evgpA%2FdINWt8uhDhkRoUT8eRKQFK%2Fimg.png",
+            'Torso Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRbsVS%2FbtszM05z6zC%2FbLKMfaNloUnptUnLzfO4ZK%2Fimg.png",
+            'Torso Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPXhG3%2FbtszQAMjLb5%2FdK7y3FQP5tNbG1WiwCtnI0%2Fimg.png",
+            'Torso Rotation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmEODo%2FbtszOK9lZyP%2F1T2WeQxHwtNhuxVExuokQ0%2Fimg.png",
+            'Pelvis Lateral Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnuPgM%2FbtszLmuHK83%2FW4wnZLQAYxZVhcOGtlLGV0%2Fimg.png",
+            'Pelvis Forward Tilt' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdpcesX%2FbtszLXuFl4d%2FhOYqQjYqb5O1iCI8spPVj0%2Fimg.png",
+            'Pelvis Rotation' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpkNyd%2FbtszKCxSf3e%2Fo3B1KXYaTWCaSMVqz7Ck3k%2Fimg.png",
+            'Kinematic Sequence' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCT6C7%2FbtszJKQzfwF%2F6KVGd09SN0SjdFmGfBRUp1%2Fimg.png",
+            'Total GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjDXOF%2FbtszRTLKWvx%2FPZXoQXoznI78pobdDHhzN1%2Fimg.png",
+            'lead GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fq3m5O%2FbtszKEvDKF4%2FILXjzpWCcnlI7l4LxoIrf0%2Fimg.png",
+            'rear GRF' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fm4fat%2FbtszOOxevuR%2FXZqpzvqUunaJNYDjKKaVIK%2Fimg.png",
+            'Back Torque' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fyrqf2%2FbtszUt0J4zM%2FurvhjFMQexFx4MuLjRB4X0%2Fimg.png",
+            'Front Torque' : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbn77X%2FbtszLjFykB9%2FdiQ21qquBWdwRzssAgGPE1%2Fimg.png"}
 
 hit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Shoulder Horizontal Abduction' : "어깨 수평 벌림 각도",
@@ -100,26 +104,47 @@ hit_col_name = {'Hip/Shoulder Separation' : "엉덩이/어깨 분리 각도",
             'Pelvis Forward Tilt' : "앞쪽 골반 기울기",
             'Pelvis Rotation' : "골반 회전 각도",
             'Kinematic Sequence' : "키네마틱 시퀀스",
-            'GRF' : "지면 반력",
-            'COP Velocity' : '압력 중심점 이동 속도'}
-
+            'Total GRF' : "전체 지면 반력",
+            'lead GRF' : "앞발 지면 반력",
+            'rear GRF' : "뒷발 지면 반력",
+            'Front Torque' : '앞발 토크',
+            'Back Torque' : '뒷발 토크'}
 
 hit_kinematic_columns = ['Pelvis Angular Velocity',
                          'Torso Angular Velocity',
-                         'Arm Angular Velocity']
-
+                         'Arm Angular Velocity',
+                         'Hand Angular Velocity']
 hit_kinematic_colors = {'Pelvis Angular Velocity': '#e63946',
                         'Torso Angular Velocity': '#2a9d8f',
-                        'Arm Angular Velocity': '#3a86ff'}
+                        'Arm Angular Velocity': '#e9c46a',
+                        'Hand Angular Velocity': '#3a86ff'}
 
-hit_GRF_columns = ['Front Vertical Force',
-                         'Back Vertical Force',
-                         'Total Vertical Force']
+hit_total_GRF_columns = ['Total Force X',
+                         'Total Force Y',
+                         'Total Force Z']
+hit_total_GRF_colors =  {'Total Force X': '#e63946',
+                         'Total Force Y': '#2a9d8f',
+                         'Total Force Z': '#3a86ff'}
 
-hit_GRF_colors = {'Front Vertical Force': '#e63946',
-                        'Back Vertical Force': '#2a9d8f',
-                        'Total Vertical Force': '#3a86ff'}
+hit_lead_GRF_columns = ['Front Force Y',
+                        'Front Force Z']
+hit_lead_GRF_colors =  {'Front Force Y': '#2a9d8f',
+                        'Front Force Z': '#3a86ff' }
 
+hit_rear_GRF_columns = ['Back Force Y',
+                        'Back Force Z']
+hit_rear_GRF_colors =  {'Back Force Y': '#2a9d8f',
+                        'Back Force Z': '#3a86ff'}
+
+hit_lead_torque_columns = ['Front Torque X',
+                        'Front Torque Y']
+hit_lead_torque_colors =  {'Front Torque X': '#e63946',
+                        'Front Torque Y': '#2a9d8f'}
+
+hit_rear_torque_columns = ['Back Torque X',
+                        'Back Torque Y']
+hit_rear_torque_colors =  {'Back Torque X': '#e63946',
+                        'Back Torque Y': '#2a9d8f'}
 # Initialization
 app = dash.Dash(__name__)
 app.title = ("KMU Baseball Report")
@@ -291,10 +316,21 @@ def update_checklists(selected_player, selected_report):
             html.Button("전체 해제", id="clear-all-variables")
         ])
  
-        columns_to_exclude = ['Time', 'Trial', 'Name', 'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity', 'Front Vertical Force', 'Back Vertical Force', 'Total Vertical Force']
+        columns_to_exclude = ['Time', 'Trial', 'Name',
+                              'Torso Angular Velocity', 'Pelvis Angular Velocity', 'Arm Angular Velocity', 'Hand Angular Velocity',
+                              'Total Force X', 'Total Force Y', 'Total Force Z',
+                              'Front Force Y', 'Front Force Z',
+                              'Back Force Y', 'Back Force Z',
+                              'Front Torque X', 'Front Torque Y',
+                              'Back Torque X', 'Back Torque Y']
+        
         variable_options = [col for col in player_data.columns if col not in columns_to_exclude]
         variable_options.append('Kinematic Sequence')
-        variable_options.append('GRF')
+        variable_options.append('Total GRF')
+        variable_options.append('lead GRF')
+        variable_options.append('rear GRF')
+        variable_options.append('Front Torque')
+        variable_options.append('Back Torque')
 
         variables_checklist = dcc.Checklist(
             id='variables-checklist',
@@ -402,7 +438,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     ))
 
                 traces.append(go.Scatter(
-                    x=[270, 270],
+                    x=[90, 90],
                     y=[min_of_mins, max_of_maxes],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -431,7 +467,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                         traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=pit_kinematic_colors[col])))
 
                 traces.append(go.Scatter(
-                    x=[270, 270],
+                    x=[90, 90],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -441,6 +477,11 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 ))
 
             graphs.append(html.Div([
+                html.Div(html.Label("구속 90마일 이상 선수 50명의 평균 관절 각속도", style={'color': 'white', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 골반 : 775.5 deg/s", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 몸통 : 1100.4 deg/s", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 어깨 : 4600.4 deg/s", style={'color': '#e9c46a', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 팔꿈치 : 2100.4 deg/s", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
                 html.Div(
                     style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
                     children=[
@@ -454,8 +495,8 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             title="키네마틱 시퀀스",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 270, 360],
-                                'ticktext': ['0s', '1.5s (FC)', '2s'],
+                                'tickvals': [0, 90, 144],
+                                'ticktext': ['0s', '0.5s (FC)', '1s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -506,7 +547,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     ))
 
                 traces.append(go.Scatter(
-                    x=[1125, 1125],
+                    x=[500, 500],
                     y=[min_of_mins, max_of_maxes],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -525,7 +566,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                         max_values.append(max_value)
                         traces.append(go.Scatter(
                             x=[trial_data.loc[max_time, 'Time'], trial_data.loc[max_time, 'Time']],
-                            y=[trial_data['Arm Angular Velocity'].min(), trial_data['Arm Angular Velocity'].max()],
+                            y=[trial_data['Hand Angular Velocity'].min(), trial_data['Hand Angular Velocity'].max()],
                             mode='lines',
                             line=dict(color=hit_kinematic_colors[col], dash='dot'),
                             name=f'{trial}번째',
@@ -535,7 +576,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                         traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_kinematic_colors[col])))
 
                 traces.append(go.Scatter(
-                    x=[1125, 1125],
+                    x=[500, 500],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -545,6 +586,11 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 ))
 
             graphs.append(html.Div([
+                html.Div(html.Label("타구 속도 100마일 이상 선수 40명의 평균 관절 각속도", style={'color': 'white', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 골반 : 704.5 deg/s", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 몸통 : 903.4 deg/s", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 리드 팔 : 1187.4 deg/s", style={'color': '#e9c46a', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
+                html.Div(html.Label("\n 리드 핸드 : 1833.4 deg/s", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'})),
                 html.Div(
                     style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
                     children=[
@@ -558,8 +604,8 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                             title="키네마틱 시퀀스",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 1125, 1500],
-                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -590,15 +636,15 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             ))
         selected_vars.remove("Kinematic Sequence")
     
-    if "GRF" in selected_vars:
+    if "Total GRF" in selected_vars:
         traces = []
 
         if consistency_mean == 'mean':
             mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
-            for col in hit_GRF_columns:
-                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_GRF_colors[col])))
+            for col in hit_total_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_total_GRF_colors[col])))
                 traces.append(go.Scatter(
-                    x=[1125, 1125],
+                    x=[500, 500],
                     y=[mean_data[col].min(), mean_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -607,37 +653,48 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     showlegend=False
                 ))
         else:
-            for col in hit_GRF_columns:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_total_GRF_columns:
                 for idx, trial in enumerate(selected_trials):
                     trial_data = filtered_data[filtered_data['Trial'] == trial]
-                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=hit_GRF_colors[col])))
-                    traces.append(go.Scatter(
-                        x=[1125, 1125],
-                        y=[trial_data[col].min(), trial_data[col].max()],
-                        mode='lines',
-                        line=dict(color='#FFFFFF'),
-                        hoverinfo='text',
-                        hovertext=f'FC',
-                        showlegend=False
-                    ))
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_total_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
 
         graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(html.Label("X 축(스탠스시 정면 방향)", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Z 축(수직 방향)", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'}))
+                    ]),
             html.Div(
                 style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
                 children=[
                     html.Div(
-                        html.Img(src=hit_src_name["GRF"], style={'padding': '1%', 'width': '100%'}),
+                        html.Img(src=hit_src_name["Total GRF"], style={'padding': '1%', 'width': '100%'}),
                         style={'width': '13%', 'backgroundColor': '#2B303D'}
                     ),
             dcc.Graph(
                 figure={
                     'data': traces,
                     'layout': go.Layout(
-                            title="지면 반력",
+                            title="전체 지면 반력",
                             xaxis={
                                 'title': '시간',
-                                'tickvals': [0, 1125, 1500],
-                                'ticktext': ['0s', '1.125s (FC)', '1.5s'],
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
                                 'showline': True,
                                 'showgrid': False,
                                 'showticklabels': True,
@@ -664,7 +721,353 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
             )])
         ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
 
-        selected_vars.remove("GRF")
+        selected_vars.remove("Total GRF")
+                    
+    if "lead GRF" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_lead_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_lead_GRF_colors[col])))
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_lead_GRF_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_lead_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Z 축(수직 방향)", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    ]),
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["lead GRF"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="앞발 지면 반력",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("lead GRF")
+
+    if "Front Torque" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_lead_torque_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_lead_torque_colors[col])))
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_lead_torque_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_lead_torque_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))   
+
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(html.Label("X 축(스탠스시 정면 방향)", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    ]),
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["Front Torque"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="앞발 토크",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N*m',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("Front Torque")
+
+    if "Back Torque" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_rear_torque_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_rear_torque_colors[col])))
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_rear_torque_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_rear_torque_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))   
+
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(html.Label("X 축(스탠스시 정면 방향)", style={'color': '#e63946', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    ]),
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["Back Torque"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="뒷발 토크",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N*m',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("Back Torque")
+        
+    if "rear GRF" in selected_vars:
+        traces = []
+
+        if consistency_mean == 'mean':
+            mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
+            for col in hit_rear_GRF_columns:
+                traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균 {col}', line=dict(color=hit_rear_GRF_colors[col])))
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[mean_data[col].min(), mean_data[col].max()],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))
+        else:
+            tmp_min = []
+            tmp_max = []
+            for col in hit_rear_GRF_columns:
+                for idx, trial in enumerate(selected_trials):
+                    trial_data = filtered_data[filtered_data['Trial'] == trial]
+                    traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f"{trial}번째 {col.split(' ')[-1]}", line=dict(color=hit_rear_GRF_colors[col])))
+                    tmp_min.append(trial_data[col].min())
+                    tmp_max.append(trial_data[col].max())
+
+                traces.append(go.Scatter(
+                    x=[500, 500],
+                    y=[min(tmp_min), max(tmp_max)],
+                    mode='lines',
+                    line=dict(color='#FFFFFF'),
+                    hoverinfo='text',
+                    hovertext=f'FC',
+                    showlegend=False
+                ))   
+
+        graphs.append(html.Div([
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'flex-end', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(html.Label("Y 축(타격 진행 방향)", style={'color': '#2a9d8f', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    html.Div(html.Label("Z 축(수직 방향)", style={'color': '#3a86ff', 'fontFamily': 'Verdana', 'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D', 'marginRight': '30px'})),
+                    ]),
+            html.Div(
+                style={'display': 'flex', 'alignItems': 'center', 'backgroundColor': '#2B303D'},
+                children=[
+                    html.Div(
+                        html.Img(src=hit_src_name["rear GRF"], style={'padding': '1%', 'width': '100%'}),
+                        style={'width': '13%', 'backgroundColor': '#2B303D'}
+                    ),
+            dcc.Graph(
+                figure={
+                    'data': traces,
+                    'layout': go.Layout(
+                            title="뒷발 지면 반력",
+                            xaxis={
+                                'title': '시간',
+                                'tickvals': [0, 500, 1200],
+                                'ticktext': ['0s', '0.5s (FC)', '1.2s'],
+                                'showline': True,
+                                'showgrid': False,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            yaxis={
+                                'title': 'N',
+                                'zeroline': True,
+                                'zerolinecolor': '#808080',
+                                'showline': True,
+                                'showgrid': True,
+                                'showticklabels': True,
+                                'color': 'white',
+                                'linecolor': 'white',
+                            },
+                            hovermode='closest',
+                            showlegend=False,
+                            paper_bgcolor='#2B303D',
+                            plot_bgcolor='#2B303D',
+                            font=dict(color='white')
+                        )
+                }, style={'width': '85%'}
+            )])
+        ], style={'backgroundColor': '#252934', 'marginTop': '80px'}))
+
+        selected_vars.remove("rear GRF")
     
     for col in selected_vars:
         traces = []
@@ -680,7 +1083,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
 
                 traces.append(go.Scatter(
-                    x=[270, 270],
+                    x=[90, 90],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -699,7 +1102,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                     traces.append(go.Scatter(x=trial_data['Time'], y=trial_data[col], mode='lines', name=f'{trial}번째', line=dict(color=color)))
 
                 traces.append(go.Scatter(
-                    x=[1125, 1125],
+                    x=[500, 500],
                     y=[trial_data[col].min(), trial_data[col].max()],
                     mode='lines',
                     line=dict(color='#FFFFFF'),
@@ -710,9 +1113,9 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
                 
         elif consistency_mean == 'mean':
             if selected_report == 'pitcher':
-                tmp_k = [270, 270]
+                tmp_k = [90, 90]
             elif selected_report == 'hitter':
-                tmp_k = [1125, 1125]
+                tmp_k = [500, 500]
 
             mean_data = filtered_data.groupby('Time').mean(numeric_only=True).reset_index()
             traces.append(go.Scatter(x=mean_data['Time'], y=mean_data[col], mode='lines', name=f'평균값', line=dict(color='#9CAFDE')))
@@ -729,13 +1132,13 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         if selected_report == 'pitcher':
             tmp_src = pit_src_name.get(col, "")
             graph_title = pit_col_name.get(col, "")
-            tv = [0, 270, 360]
-            tt = ['0s', '1.5s (FC)', '2s']
+            tv = [0, 90, 144]
+            tt = ['0s', '0.5s (FC)', '1s']
         elif selected_report == 'hitter':
             tmp_src = hit_src_name.get(col, "")
             graph_title = hit_col_name.get(col, "")
-            tv = [0, 1125, 1500]
-            tt = ['0s', '1.125s (FC)', '1.5s']
+            tv = [0, 500, 1200]
+            tt = ['0s', '0.5s (FC)', '1.2s']
 
         graphs.append(html.Div([
             html.Div(
