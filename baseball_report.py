@@ -883,7 +883,7 @@ def update_graph(selected_player, selected_trials, selected_vars, consistency_me
         selected_vars.remove("rear GRF")
     
     for col in selected_vars:
-        if '토크' in col:
+        if 'Torque' in col:
             y_name = 'N*m'
         else:
             y_name = '각도'
